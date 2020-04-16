@@ -59,6 +59,8 @@ if [ "$1" = 'mattermost' ]; then
     echo -ne "Configure database connection..."
     # URLEncode the password, allowing for special characters
     ENCODED_PASSWORD=$(printf %s $MM_PASSWORD | jq -s -R -r @uri)
+    # TODO Myy: Why is ssl disabled ? Check how to enable it when trying to
+    # deploy it on a larger scale.
     export MM_SQLSETTINGS_DATASOURCE="postgres://$MM_USERNAME:$ENCODED_PASSWORD@$DB_HOST:$DB_PORT_NUMBER/$MM_DBNAME?sslmode=disable&connect_timeout=10"
     echo OK
   else
