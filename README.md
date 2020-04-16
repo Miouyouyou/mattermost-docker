@@ -1,3 +1,9 @@
+# Personal modifications added
+
+Don't use this version, unless you want to be eaten by a grue.
+
+See the original version : https://github.com/mattermost/mattermost-docker
+
 # Production Docker deployment for Mattermost
 
 This project enables deployment of a Mattermost server in a multi-node production configuration using Docker.
